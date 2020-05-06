@@ -1,60 +1,38 @@
-// Create some arrays
-const numbers = [43, 56, 33, 23, 44, 36, 5];
-const numbers2 = new Array(22, 45, 33, 76, 54);
-const fruit = ["Apple", "Banana", "Orange", "Pear"];
-const mixed = [22, "Hello", true, undefined, null, { a: 1, b: 1 }, new Date()];
+const person = {
+  firstName: "Malala",
+  lastName: "Yousafzai",
+  age: 23,
+  email: "mal@mal.com",
+  hobbies: ["philanthropy", "international politics", "human rights"],
+  address: {
+    city: "Oxford",
+    country: "England",
+  },
+  getBirthYear: function () {
+    return 2020 - this.age;
+  },
+};
 
 let val;
 
-// Get array length
-val = numbers.length;
-// Check if is array
-val = Array.isArray(numbers);
-// Get single value
-val = numbers[3];
-val = numbers[0];
-// // Insert into array
-numbers[2] = 100;
-// // Find index of value
-val = numbers.indexOf(36);
+val = person;
+// Get specific value
+val = person.firstName;
+val = person["lastName"];
+val = person.age;
+val = person.hobbies[1];
+val = person.address.country;
+val = person.address["city"];
+val = person.getBirthYear();
 
-// Mutating arrays
-//Add on to end
-// numbers.push(250);
-// // Add on to front
-// numbers.unshift(120);
-// // Take off from end
-// numbers.pop();
-// // Take off from front
-// numbers.shift();
-// // Splice values
-// numbers.splice(1, 3);
-// // Reverse
-// numbers.reverse();
+val = console.log(val);
 
-// Concatenate array
-val = numbers.concat(numbers2);
+const bears = [
+  { name: "Black", likes: "berries" },
+  { name: "Grizzly", likes: "salmon" },
+  { name: "Brown", likes: "honey" },
+];
 
-// Sorting arrays
-// val = fruit.sort();
-// val = numbers.sort();
-
-// // Use the "compare function"
-// val = numbers.sort(function (x, y) {
-//   return x - y;
-// });
-
-// Reverse sort
-// val = numbers.sort(function (x, y) {
-//   return y - x;
-// });
-
-// Find
-function over50(num) {
-  return num > 50;
+for (let i = 0; i < bears.length; i++) {
+  console.log(bears[i].likes);
 }
-
-val = numbers.find(over50);
-
-console.log(val);
-console.log(numbers);
