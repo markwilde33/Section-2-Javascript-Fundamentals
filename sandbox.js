@@ -12,27 +12,28 @@ const person = {
     return 2020 - this.age;
   },
 };
-
 let val;
 
-val = person;
-// Get specific value
-val = person.firstName;
-val = person["lastName"];
-val = person.age;
-val = person.hobbies[1];
-val = person.address.country;
-val = person.address["city"];
-val = person.getBirthYear();
+const today = new Date();
+let birthday = new Date("9-10-1981 11:25:00");
+birthday = new Date("September 10 1981");
+birthday = new Date("9/10/1981");
 
-val = console.log(val);
+val = today.getMonth();
+val = today.getDate();
+val = today.getDay();
+val = today.getFullYear();
+val = today.getHours();
+val = today.getMinutes();
+val = today.getSeconds();
+val = today.getMilliseconds();
+val = today.getTime();
 
-const bears = [
-  { name: "Black", likes: "berries" },
-  { name: "Grizzly", likes: "salmon" },
-  { name: "Brown", likes: "honey" },
-];
+birthday.setMonth(2);
+birthday.setDate(12);
+birthday.setFullYear(1985);
+birthday.setHours(3);
+birthday.setMinutes(30);
+birthday.setSeconds(25);
 
-for (let i = 0; i < bears.length; i++) {
-  console.log(bears[i].likes);
-}
+console.log(birthday);
