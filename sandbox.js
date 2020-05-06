@@ -1,57 +1,36 @@
-const firstName = "Jacob";
-const lastName = "Ladder";
-const age = 48;
-const str = "It always seems impossible until it's done";
-const tags = "photos, design, restoration, digital";
-let val;
+const name = "Mark";
+const age = 39;
+const job = "Front End Developer";
+const city = "Dublin";
+let html;
 
-val = firstName + lastName;
+// Without template strings (es5)
+html =
+  "<ul><li>Name: " +
+  name +
+  "</li><li>Age: " +
+  age +
+  " </li><li>Job: " +
+  job +
+  " </li><li>City: " +
+  city +
+  " </li></ul>";
 
-// Concatenation
-val = firstName + " " + lastName;
+function hello() {
+  return "hello";
+}
 
-// Append
-val = "Sham ";
-val += "Tastic";
+// With template strings (es6)
+html = `
+  <ul>
+    <li>Name: ${name}</li>
+    <li>Age: ${age}</li>
+    <li>Job: ${job}</li>
+    <li>City: ${city}</li>
+    <li>${2 + 2}</li>
+    <li>${hello()}</li>
+    <li>${age > 30 ? "Over 30" : "Under 30"}</li>
+  </ul>
+`;
 
-val = "Aye up, they call me " + firstName + " and I am " + age;
-
-// Length
-val = firstName.length;
-
-// Concat
-val = firstName.concat(" ", lastName);
-
-// Change case
-val = firstName.toUpperCase();
-val = firstName.toLowerCase();
-
-// Index of
-val = firstName.indexOf("b");
-val = lastName.lastIndexOf("d");
-
-//Char at
-val = firstName.charAt("4");
-
-// Get last char
-val = firstName.charAt(firstName.length - 1);
-
-// Substrings
-val = firstName.substring(2, 4);
-
-// Slice
-val = firstName.slice(2, 4);
-val = firstName.slice(-4);
-
-// Split
-val = str.split(" ");
-val = tags.split(",");
-
-// Replace
-val = str.replace("done", "won");
-
-// Includes
-val = str.includes("Its");
-val = str.includes("It");
-
-console.log(val);
+document.body.innerHTML = html;
