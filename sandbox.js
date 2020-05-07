@@ -1,39 +1,92 @@
-const person = {
-  firstName: "Malala",
-  lastName: "Yousafzai",
-  age: 23,
-  email: "mal@mal.com",
-  hobbies: ["philanthropy", "international politics", "human rights"],
-  address: {
-    city: "Oxford",
-    country: "England",
-  },
-  getBirthYear: function () {
-    return 2020 - this.age;
-  },
-};
-let val;
+// if(something){
+//   do something
+// } else {
+//   do something else
+// }
 
-const today = new Date();
-let birthday = new Date("9-10-1981 11:25:00");
-birthday = new Date("September 10 1981");
-birthday = new Date("9/10/1981");
+const id = 100;
 
-val = today.getMonth();
-val = today.getDate();
-val = today.getDay();
-val = today.getFullYear();
-val = today.getHours();
-val = today.getMinutes();
-val = today.getSeconds();
-val = today.getMilliseconds();
-val = today.getTime();
+// // EQUAL TO
+// if (id == 100) {
+//   console.log("CORRECT");
+// } else {
+//   console.log("INCORRECT");
+// }
 
-birthday.setMonth(2);
-birthday.setDate(12);
-birthday.setFullYear(1985);
-birthday.setHours(3);
-birthday.setMinutes(30);
-birthday.setSeconds(25);
+// // NOT EQUAL TO
+// if (id != 101) {
+//   console.log("CORRECT");
+// } else {
+//   console.log("INCORRECT");
+// }
 
-console.log(birthday);
+// // EQUAL TO VALUE & TYPE
+// if (id === 100) {
+//   console.log("CORRECT");
+// } else {
+//   console.log("INCORRECT");
+// }
+
+// // EQUAL TO VALUE & TYPE
+// if (id !== 100) {
+//   console.log("CORRECT");
+// } else {
+//   console.log("INCORRECT");
+// }
+
+// // Test if undefined
+// if (typeof id !== "undefined") {
+//   console.log(`The ID is ${id}`);
+// } else {
+//   console.log("NO ID");
+// }
+
+// // GREATER OR LESS THAN
+// if (id <= 100) {
+//   console.log("CORRECT");
+// } else {
+//   console.log("INCORRECT");
+// }
+
+// IF ELSE
+
+const color = "yellow";
+
+if (color === "red") {
+  console.log("Color is red");
+} else if (color === "blue") {
+  console.log("Color is blue");
+} else {
+  console.log("Color is not red or blue");
+}
+
+// LOGICAL OPERATORS
+
+const name = "Steve";
+const age = 70;
+
+// AND &&
+if (age > 0 && age < 12) {
+  console.log(`${name} is a child`);
+} else if (age >= 13 && age <= 19) {
+  console.log(`${name} is a teenager`);
+} else {
+  console.log(`${name} is an adult`);
+}
+
+// OR ||
+if (age < 16 || age > 65) {
+  console.log(`${name} can not run in race`);
+} else {
+  console.log(`${name} is registered for the race`);
+}
+
+// TERNARY OPERATOR
+console.log(id === 100 ? "CORRECT" : "INCORRECT");
+
+// WITHOUT BRACES
+if (id === 100) console.log("CORRECT");
+else console.log("INCORRECT");
+
+if (id === 100) console.log("CORRECT");
+else console.log("INCORRECT");
